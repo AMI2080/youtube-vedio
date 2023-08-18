@@ -1,0 +1,221 @@
+.video-container{
+  background-color: #000;
+  height: 480px;
+  max-height: calc(100vh - 56px);
+  width: 100%;
+  position: relative;
+}
+
+.video-container .video{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.video-container .auther-info{
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  opacity: .85;
+  cursor: pointer;
+}
+
+.video-container .auther-info .tooltip{
+  background-color: #111;
+  width: 270px;
+  white-space:normal;
+  bottom: auto;
+  top: calc(100% + 10px);
+  text-align: left;
+  right: -6px;
+}
+
+.video-container .auther-info:hover{
+  opacity: 1;
+}
+
+.player-bottom{
+  position: absolute;
+  height: 50px;
+  width: calc(100% - 20px);
+  margin-inline: 10px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.player-bottom .progress-conteainer{
+  position: absolute;
+  height: 23px;
+  top: -23px;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.player-bottom .progress-background{
+  position: absolute;
+  height: 3px;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  background-color: #ddd3;
+}
+
+.player-bottom .progress-buffering{
+  position: absolute;
+  height: 3px;
+  top: 10px;
+  left: 0;
+  background-color: #aaa;
+}
+
+.player-bottom .progress-current{
+  position: absolute;
+  height: 3px;
+  top: 10px;
+  left: 0;
+  background-color: red;
+}
+
+.player-bottom .progress-end{
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  top: calc(50% - 6px);
+  margin-left: -6px;
+  background-color: red;
+  transition-duration: .1s;
+}
+
+.player-bottom .progress-conteainer:hover .progress-end{
+  height: 12px;
+  width: 12px
+}
+
+.player-bottom .progress-conteainer:hover .progress-background,
+.player-bottom .progress-conteainer:hover .progress-buffering,
+.player-bottom .progress-conteainer:hover .progress-current{
+  height: 5px;
+  top: 9px;
+}
+
+.controls{
+  width: 100%;
+  height: 100%;
+  margin-inline: 3px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.player-bottom .left-contols{
+  display: flex;
+  align-items: center;
+}
+
+.player-bottom .right-contols{
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.player-bottom .contol-container{
+  display: flex;
+  margin-inline: 12px;
+  transition-duration: .05s;
+  cursor: pointer;
+  opacity: .9;
+}
+
+.player-bottom .contol-container:hover{
+  opacity: 1;
+}
+
+.player-bottom .contol-container img{
+  height: 24px;
+}
+
+.player-bottom .contol-container .time{
+  font-size: 12px;
+  cursor: text;
+  color: #fff;
+}
+
+.player-bottom .contol-container .sound-bar{
+  width: 0px;
+  padding-left: 12px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  transition-duration: .2s;
+  overflow: hidden;
+}
+
+.player-bottom .contol-container .sound-bar .background-bar,
+.player-bottom .contol-container .sound-bar .volum-bar{
+  height: 3px;
+  position: absolute;
+  left: 12px;
+}
+
+.player-bottom .contol-container .sound-bar .background-bar{
+  background-color: #616161;
+  width: 100%;
+}
+
+.mute-btn:hover .sound-bar{
+  width: 90px;
+}
+
+.player-bottom .contol-container .sound-bar .volum-end{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 10px;
+  margin-left: 5px;
+  height: 10px;
+}
+
+.player-bottom .contol-container .sound-bar .volum-bar{
+  background-color: #fff;
+}
+
+.player-bottom .contol-container .autoplay-container{
+  position: relative;
+}
+
+.player-bottom .contol-container .autoplay-switch{
+  position: absolute;
+  opacity: .9;
+  left: 0;
+}
+
+.player-bottom .contol-container .cc-btn,
+.player-bottom .contol-container .autoplay-back{
+  opacity: .55;
+}
+
+.player-bottom .contol-container .tooltip{
+  background-color: #111;
+  font-weight: bold;
+  bottom: auto;
+  top: -50px;
+}
+
+.player-bottom .right-contols .contol-container:last-of-type{
+  justify-content: right;
+}
+
+.player-bottom .right-contols .contol-container:last-of-type .tooltip{
+  margin-right: -50%;
+}

@@ -6,7 +6,9 @@
 
 body{
   margin: 0;
-  background-color: #000;
+  background-color: #0f0f0f;
+  padding-top: 56px;
+  min-width: 700px;
   min-height: 5000px;
 }
 
@@ -26,9 +28,9 @@ body{
   line-height: 12px;
   border-radius: 4px;
   padding: 8px 8px;
-  opacity: 0;
+  display: none;
 }
 
 .tooltip-container:hover .tooltip{
-  opacity: 1;
+  display: inline-block;
 }
