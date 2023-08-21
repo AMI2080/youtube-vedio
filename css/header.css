@@ -132,6 +132,26 @@ header .header-right .item-container{
   margin-inline: 0px;
 }
 
+.notification-count{
+  display: none;
+  color: #fff;
+  background-color: rgb(200, 0, 0);
+  border: 2px solid #0f0f0f;
+  font-size: 12px;
+  line-height: 14px;
+  width: 18px;
+  height: 18px;
+  padding-block: 2px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.notification-count.has-notifications{
+  display: inline-block;
+}
+
 header .header-right img{
   height: 24px;
   width: 24px;
