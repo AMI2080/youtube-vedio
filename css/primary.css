@@ -205,6 +205,11 @@
   opacity: .55;
 }
 
+.player-bottom .left-contols .contol-container .tooltip{
+  right: auto;
+  left: 0;
+}
+
 .player-bottom .contol-container .tooltip{
   background-color: #111;
   font-weight: bold;

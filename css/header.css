@@ -132,6 +132,11 @@ header .header-right .item-container{
   margin-inline: 0px;
 }
 
+.notification{
+  position: relative;
+  text-align: center;
+}
+
 .notification-count{
   display: none;
   color: #fff;
@@ -146,7 +151,7 @@ header .header-right .item-container{
   border-radius: 50%;
   position: absolute;
   top: 2px;
-  right: 2px;
+  right: 1px;
 }
 .notification-count.has-notifications{
   display: inline-block;
