@@ -1,19 +1,20 @@
-.video-container{
+.video-container {
   background-color: #000;
   height: 480px;
+  min-height: 300px;
   max-height: calc(100vh - 56px);
   width: 100%;
   position: relative;
 }
 
-.video-container .video{
+.video-container .video {
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
 }
 
-.video-container .auther-info{
+.video-container .auther-info {
   width: 20px;
   height: 20px;
   font-size: 16px;
@@ -29,21 +30,21 @@
   cursor: pointer;
 }
 
-.video-container .auther-info .tooltip{
+.video-container .auther-info .tooltip {
   background-color: #111;
   width: 270px;
-  white-space:normal;
+  white-space: normal;
   bottom: auto;
   top: calc(100% + 10px);
   text-align: left;
   right: -6px;
 }
 
-.video-container .auther-info:hover{
+.video-container .auther-info:hover {
   opacity: 1;
 }
 
-.player-bottom{
+.player-bottom {
   position: absolute;
   height: 50px;
   width: calc(100% - 20px);
@@ -53,7 +54,7 @@
   align-items: center;
 }
 
-.player-bottom .progress-conteainer{
+.player-bottom .progress-conteainer {
   position: absolute;
   height: 23px;
   top: -23px;
@@ -62,7 +63,7 @@
   cursor: pointer;
 }
 
-.player-bottom .progress-background{
+.player-bottom .progress-background {
   position: absolute;
   height: 3px;
   top: 10px;
@@ -71,7 +72,7 @@
   background-color: #ddd3;
 }
 
-.player-bottom .progress-buffering{
+.player-bottom .progress-buffering {
   position: absolute;
   height: 3px;
   top: 10px;
@@ -79,7 +80,7 @@
   background-color: #aaa;
 }
 
-.player-bottom .progress-current{
+.player-bottom .progress-current {
   position: absolute;
   height: 3px;
   top: 10px;
@@ -87,7 +88,7 @@
   background-color: red;
 }
 
-.player-bottom .progress-end{
+.player-bottom .progress-end {
   position: absolute;
   height: 0px;
   width: 0px;
@@ -98,19 +99,19 @@
   transition-duration: .1s;
 }
 
-.player-bottom .progress-conteainer:hover .progress-end{
+.player-bottom .progress-conteainer:hover .progress-end {
   height: 12px;
   width: 12px
 }
 
 .player-bottom .progress-conteainer:hover .progress-background,
 .player-bottom .progress-conteainer:hover .progress-buffering,
-.player-bottom .progress-conteainer:hover .progress-current{
+.player-bottom .progress-conteainer:hover .progress-current {
   height: 5px;
   top: 9px;
 }
 
-.controls{
+.controls {
   width: 100%;
   height: 100%;
   margin-inline: 3px;
@@ -118,18 +119,18 @@
   grid-template-columns: 1fr 1fr;
 }
 
-.player-bottom .left-contols{
+.player-bottom .left-contols {
   display: flex;
   align-items: center;
 }
 
-.player-bottom .right-contols{
+.player-bottom .right-contols {
   display: flex;
   align-items: center;
   justify-content: right;
 }
 
-.player-bottom .contol-container{
+.player-bottom .contol-container {
   display: flex;
   margin-inline: 12px;
   transition-duration: .05s;
@@ -137,21 +138,21 @@
   opacity: .9;
 }
 
-.player-bottom .contol-container:hover{
+.player-bottom .contol-container:hover {
   opacity: 1;
 }
 
-.player-bottom .contol-container img{
+.player-bottom .contol-container img {
   height: 24px;
 }
 
-.player-bottom .contol-container .time{
+.player-bottom .contol-container .time {
   font-size: 12px;
   cursor: text;
   color: #fff;
 }
 
-.player-bottom .contol-container .sound-bar{
+.player-bottom .contol-container .sound-bar {
   width: 0px;
   padding-left: 12px;
   position: relative;
@@ -162,22 +163,22 @@
 }
 
 .player-bottom .contol-container .sound-bar .background-bar,
-.player-bottom .contol-container .sound-bar .volum-bar{
+.player-bottom .contol-container .sound-bar .volum-bar {
   height: 3px;
   position: absolute;
   left: 12px;
 }
 
-.player-bottom .contol-container .sound-bar .background-bar{
+.player-bottom .contol-container .sound-bar .background-bar {
   background-color: #616161;
   width: 100%;
 }
 
-.mute-btn:hover .sound-bar{
+.mute-btn:hover .sound-bar {
   width: 90px;
 }
 
-.player-bottom .contol-container .sound-bar .volum-end{
+.player-bottom .contol-container .sound-bar .volum-end {
   position: absolute;
   background-color: #fff;
   border-radius: 50%;
@@ -186,41 +187,41 @@
   height: 10px;
 }
 
-.player-bottom .contol-container .sound-bar .volum-bar{
+.player-bottom .contol-container .sound-bar .volum-bar {
   background-color: #fff;
 }
 
-.player-bottom .contol-container .autoplay-container{
+.player-bottom .contol-container .autoplay-container {
   position: relative;
 }
 
-.player-bottom .contol-container .autoplay-switch{
+.player-bottom .contol-container .autoplay-switch {
   position: absolute;
   opacity: .9;
   left: 0;
 }
 
 .player-bottom .contol-container .cc-btn,
-.player-bottom .contol-container .autoplay-back{
+.player-bottom .contol-container .autoplay-back {
   opacity: .55;
 }
 
-.player-bottom .left-contols .contol-container .tooltip{
+.player-bottom .left-contols .contol-container .tooltip {
   right: auto;
   left: 0;
 }
 
-.player-bottom .contol-container .tooltip{
+.player-bottom .contol-container .tooltip {
   background-color: #111;
   font-weight: bold;
   bottom: auto;
   top: -50px;
 }
 
-.player-bottom .right-contols .contol-container:last-of-type{
+.player-bottom .right-contols .contol-container:last-of-type {
   justify-content: right;
 }
 
-.player-bottom .right-contols .contol-container:last-of-type .tooltip{
+.player-bottom .right-contols .contol-container:last-of-type .tooltip {
   margin-right: -50%;
 }

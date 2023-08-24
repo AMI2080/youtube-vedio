@@ -1,4 +1,4 @@
-header{
+header {
   background-color: #0f0f0f;
   height: 56px;
   padding-inline: 16px;
@@ -13,13 +13,17 @@ header{
 
 header .header-left,
 header .header-middle,
-header .header-right{
+header .header-right {
   display: flex;
   align-items: center;
   align-content: center;
 }
 
-header .burger-menu{
+header .header-middle{
+  position: relative;
+}
+
+header .burger-menu {
   background-color: transparent;
   border: none;
   border-radius: 20px;
@@ -29,23 +33,23 @@ header .burger-menu{
 }
 
 header .burger-menu:hover,
-header .header-right .item-container:hover{
+header .header-right .item-container:hover {
   background-color: #ffffff25;
   cursor: pointer;
 }
 
-header .burger-menu .burger-menu-icon{
+header .burger-menu .burger-menu-icon {
   height: 24px;
   width: 24px;
 }
 
-header .logo-container{
+header .logo-container {
   padding: 18px 16px;
   text-decoration: none;
   position: relative;
 }
 
-header .logo-container .country{
+header .logo-container .country {
   color: #aaa;
   font-size: 10px;
   position: absolute;
@@ -53,21 +57,40 @@ header .logo-container .country{
   right: 0;
 }
 
-header .header-middle .search-input{
+header .header-middle .search-input {
   height: 40px;
   flex: 1;
   width: 0;
   padding: 8px 16px;
-  margin-left: 30px;
+  margin-left: 50px;
   font-size: 16px;
   background-color: #121212;
-  color: #798888;
+  color: #fff;
   border: 1px solid #222;
   border-radius: 20px 0 0 20px;
+  z-index: 2;
+}
+
+header .header-middle .search-input:focus{
+  margin-left: 20px;
+  padding-left: 46px;
+}
+
+header .header-middle .search-input + .search-icon{
+  position: absolute;
+  top: 22px;
+  left: 38px;
+  z-index: 3;
+  color: #fff;
+  opacity: 0;
+}
+
+header .header-middle .search-input:focus + .search-icon{
+  opacity: 1;
 }
 
 header .header-middle .search-btn,
-header .header-middle .voice-search-btn{
+header .header-middle .voice-search-btn {
   background-color: #222;
   height: 40px;
   border: none;
@@ -76,68 +99,70 @@ header .header-middle .voice-search-btn{
   cursor: pointer;
 }
 
-header .header-middle .search-btn{
+header .header-middle .search-btn {
   border-radius: 0 20px 20px 0;
 }
 
-header .header-middle .voice-search-btn{
+header .header-middle .voice-search-btn {
   width: 40px;
   margin-left: 10px;
   padding-inline: 11px;
 }
 
 header .header-middle .search-btn img,
-header .header-middle .voice-search-btn img{
+header .header-middle .voice-search-btn img {
   height: 18px;
   margin-top: 3px;
 }
 
-@media(max-width: 700px){
-  header{
+@media(max-width: 700px) {
+  header {
     grid-template-columns: 200px 1fr 125px;
   }
 
-  header .header-middle .search-input{
+  header .header-middle .search-input {
     display: none;
   }
-  
-  header .header-middle .search-btn{
+
+  header .header-middle .search-btn {
     border-radius: 20px;
     padding-inline: 10px;
     background-color: transparent;
   }
-  
-  header .header-middle .voice-search-btn{
+
+  header .header-middle .voice-search-btn {
     background-color: transparent;
     margin-left: 0;
   }
 
   header .header-middle .search-btn:hover,
-  header .header-middle .voice-search-btn:hover{
+  header .header-middle .voice-search-btn:hover {
     background-color: #222;
   }
-  header .header-middle{
+
+  header .header-middle {
     justify-content: end;
   }
 }
 
-header .header-right{
+header .header-right {
   justify-content: end;
 }
 
-header .header-right .item-container{
+header .header-right .item-container {
   height: 40px;
   width: 40px;
+  text-align: center;
   border-radius: 20px;
   margin-inline: 0px;
 }
 
-.notification{
+.notification {
   position: relative;
   text-align: center;
 }
 
-.notification-count{
+.notification-count {
   display: none;
   color: #fff;
   background-color: rgb(200, 0, 0);
@@ -153,17 +178,18 @@ header .header-right .item-container{
   top: 2px;
   right: 1px;
 }
-.notification-count.has-notifications{
+
+.notification-count.has-notifications {
   display: inline-block;
 }
 
-header .header-right img{
+header .header-right img {
   height: 24px;
   width: 24px;
   margin: 8px 0px;
 }
 
-header .header-right .profile-image{
+header .header-right .profile-image {
   height: 32px;
   width: 32px;
   margin-left: 16px;

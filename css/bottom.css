@@ -203,7 +203,7 @@ section.bottom .suggested-videos .btns,
 section.bottom .suggested-videos-right .btns {
   width: calc(100% - 5px);
   display: inline-flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
@@ -514,5 +514,201 @@ section.bottom .suggested-videos .show-more-btn {
 }
 
 section.bottom .suggested-videos .show-more-btn:hover {
+  background-color: #3ea6ff33;
+}
+
+section.bottom .comments {
+  color: #fff;
+  padding-top: 20px;
+}
+
+section.bottom .comments .sort-by-btn {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+section.bottom .comments .sort-by-btn .tooltip {
+  bottom: auto;
+  top: calc(100% + 20px);
+}
+
+section.bottom .comments .new-comment {
+  margin-block: 20px;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+}
+
+section.bottom .comments .new-comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+section.bottom .comments .new-comment .input-container {
+  padding-right: 20px;
+}
+
+section.bottom .comments .new-comment input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #272727;
+  height: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+
+section.bottom .comments .new-comment input::placeholder {
+  color: #aaa;
+  font-size: 16px;
+}
+
+section.bottom .comments .new-comment input:focus {
+  outline: none;
+  border-bottom: 2px solid #fff;
+}
+
+section.bottom .comments .new-comment .new-comment-btns {
+  padding-top: 15px;
+  opacity: 0;
+}
+
+section.bottom .comments .new-comment input:focus+.new-comment-btns,
+section.bottom .comments .new-comment input:not(:placeholder-shown)+.new-comment-btns {
+  opacity: 1;
+}
+
+section.bottom .comments .new-comment .new-comment-btns .emoji {
+  background-color: transparent;
+  cursor: pointer;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 24px;
+  color: #aaa;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+section.bottom .comments .new-comment .new-comment-btns .emoji:hover {
+  background-color: #272727;
+}
+
+section.bottom .comments .new-comment .new-comment-btns .cancel,
+section.bottom .comments .new-comment .new-comment-btns .insert {
+  margin-inline: 5px;
+  line-height: 24px;
+  padding: 8px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+section.bottom .comments .new-comment .new-comment-btns .cancel:hover {
+  background-color: #272727;
+}
+
+section.bottom .comments .new-comment .new-comment-btns .insert {
+  background-color: #222;
+  color: #555;
+}
+
+section.bottom .comments .new-comment input:not(:placeholder-shown)+.new-comment-btns .insert {
+  background-color: #3ea6ffee;
+  color: #272727;
+}
+
+section.bottom .comments .new-comment input:not(:placeholder-shown)+.new-comment-btns .insert:hover {
+  background-color: #3ea6ff;
+}
+
+section.bottom .comments .comment {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+section.bottom .comments .comment .actions {
+  position: absolute;
+  top: 10px;
+  right: 8px;
+  opacity: 0;
+}
+
+section.bottom .comments .comment:hover .actions {
+  opacity: 1;
+}
+
+section.bottom .comments .comment img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+section.bottom .comments .comment .user-name {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+section.bottom .comments .comment .comment-time {
+  color: #aaa;
+  font-size: 12px;
+}
+
+section.bottom .comments .comment .comment-time:hover {
+  color: #fff;
+}
+
+section.bottom .comments .comment .content {
+  margin-block: 10px 20px;
+}
+
+section.bottom .comments .comment .like-btn,
+section.bottom .comments .comment .dislike-btn {
+  padding: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section.bottom .comments .comment .likes-count {
+  color: #aaa;
+  font-size: 13px;
+}
+
+section.bottom .comments .comment .dislike-btn {
+  margin-left: 12px;
+}
+
+section.bottom .comments .comment .like-btn:hover,
+section.bottom .comments .comment .dislike-btn:hover {
+  background-color: #272727;
+}
+
+section.bottom .comments .comment .reply-btn {
+  padding: 8px 15px;
+  text-align: center;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+section.bottom .comments .comment .reply-btn:hover {
+  background-color: #272727;
+}
+
+section.bottom .comments .comment .replies {
+  color: #3ea6ff;
+  display: inline-block;
+  padding: 5px 20px;
+  margin-top: 4px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+section.bottom .comments .comment .replies:hover {
   background-color: #3ea6ff33;
 }
